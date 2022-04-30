@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/aop
+ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+	<aop:config>
+	<!-- For all methods inside the package -->
+		<aop:aspect id="log" ref="logging">
+			<aop:pointcut
+				expression="execution(* com.spring.*.*(..))" id="selectAll" />
+			<aop:before pointcut-ref="selectAll" method="beforeAdvice" />
+			<aop:after pointcut-ref="selectAll" method="afterAdvice" />
+			<aop:after-returning pointcut-ref="selectAll"
+				returning="retVal" method="afterReturningAdvice" />
+			<aop:after-throwing pointcut-ref="selectAll"
+	throwing="ex" method="afterThrowingAdvice" />
+		</aop:aspect>
+		
+		<!-- For specific method inside the package -->	
+		<!-- <aop:aspect id="log" ref="logging">
+			<aop:pointcut
+				expression="execution(* com.spring.Student.getName(..))" id="selectAll" />
+			<aop:before pointcut-ref="selectAll" method="beforeAdvice" />
+			<aop:after pointcut-ref="selectAll" method="afterAdvice" />
+			<aop:after-returning pointcut-ref="selectAll"
+				returning="retVal" method="afterReturningAdvice" />
+			<aop:after-throwing pointcut-ref="selectAll"
+				throwing="ex" method="afterThrowingAdvice" />
+		</aop:aspect> -->
+		
+	</aop:config>
+
+	<bean id="student" class="com.spring.Student">
+		<property name="name" value="Manish" />
+		<property name="age" value="23"/>
+	</bean>
+
+	<bean id="logging" class="com.spring.Logging"></bean>
+</beans>
