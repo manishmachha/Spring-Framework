@@ -4,4 +4,32 @@
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="com.spring"/>
+			<item value="cpm.spring"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Annotation_Import_Java_based_annotations"/>
+			<item value="Annotation_Qualifier"/>
+			<item value="Annotation_Required"/>
+			<item value="Annotation_Scope_Java_Based_annotations"/>
+			<item value="AspectJ_based_AOP"/>
+			<item value="Bean_Autowire_by_Constructor"/>
+			<item value="Bean_Autowire_byName"/>
+			<item value="Bean_Autowire_Type"/>
+			<item value="Bean_Definition_Inheritance"/>
+			<item value="Bean_Life_Cycle_init_and_destroy"/>
+			<item value="Bean_Post_Processors"/>
+			<item value="Constructor_based_Dependency_Injection"/>
+			<item value="Injecting_Bean_Dependencies_Java_Based_Annotation"/>
+			<item value="Injecting_Bean_References"/>
+			<item value="Injecting_Collection"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
 </section>

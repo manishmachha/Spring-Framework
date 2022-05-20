@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Tyre {
+	
 	String brand;
 
 	public String getBrand() {
@@ -14,8 +15,11 @@ public class Tyre {
 		this.brand = brand;
 	}
 
+
 	@Override
 	public String toString() {
-		return "| Tyre : " + brand;
+		return "Tyre [brand=" + brand + "]";
 	}
+
+
 }

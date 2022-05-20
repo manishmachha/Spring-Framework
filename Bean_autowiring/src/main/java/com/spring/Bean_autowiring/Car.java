@@ -18,6 +18,6 @@ public class Car implements Vehicle{
 	}
 
 	public void drive() {
-		System.out.println("Car " + tyre + " | is working");
+		System.out.println("Car " + tyre);
 	}
 }

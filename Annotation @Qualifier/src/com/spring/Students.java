@@ -1,8 +1,5 @@
 package com.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
-
 public class Students {
 	String name;
 	int age;

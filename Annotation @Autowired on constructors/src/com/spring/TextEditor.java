@@ -6,9 +6,9 @@ public class TextEditor {
 	private SpellChecker spellChecker;
 
 	@Autowired
-	public TextEditor(SpellChecker spellChecker) {
+	public TextEditor(SpellChecker spellCheck) {
 		System.out.println("inside TextEditor constructor");
-		this.spellChecker = spellChecker;
+		this.spellChecker = spellCheck;
 	}
 
 	public void spellcheck() {
